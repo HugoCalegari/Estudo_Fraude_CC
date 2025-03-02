@@ -15,3 +15,15 @@ Será considerado fraude toda movimentação no cartão de crédito sem consenti
 
 De acordo com o site Stride (https://stripe.com/br/resources/more/credit-card-fraud-detection-and-prevention), é comentado sobre um relatório de 2021 da Nilson que destaca que as fraudes de cartão de crédito totalizaram 28,65 bilhões de dólares. No mesmo link, a LexisNexis relata que a cada 1 dólar em fraude, as empresas de varejo e e-commerce dos EUA incorrem em um custo de 3,75 dólares. 
 
+No mundo real, a necessidade de diagnosticar fraude é imediata a transação. Dessa forma, será dada a prioridade em classificar as transações como fraudulentas ou não. É necessário balancear os erros: classificar como fraudulento quando não é (atrito com o cliente, dado que a transação foi barrada) x classificar como não fraudulento quando é (perda financeira para a instituição financeira).
+
+
+# Etapas das análises
+
+1.Base_de_dados: download e leitura da base de dados, usando a API do Kaggle.
+
+2.Exploracao_variaveis: estudo univariado e bivariado das variáveis; identificação de potenciais transformações e criação de variáveis; correlação entre as variáveis e avaliação do potencial preditivo de algumas delas.
+
+3.Pre_processamento: há muitas variáveis categóricas dicotômicas e algumas variáveis numéricas. A priori, foi aplicado somente a transformação logarítma nos dados numéricos.
+
+4.Modelagem: fase de avaliação de modelos e estratégias de modelagem para os dados.
