@@ -53,6 +53,13 @@ Identificou-se uma correlação mais forte entre repeat_retailer e log_distance_
 
 Por fim, foi calculado o IV das variáveis, para identificar as variáveis com maiores potenciais preditivos para a target fraud. Destacam-se as seguintes variáveis: log_distance_from_home, used_pin_number e online_order, considerando o intervalo de iv entre 0.1 e 0.5 (poder preditivo de médio a forte).
 
+Potenciais features novas:
+
+- repeat_retailer * online_order = se a transação foi feita online E a transação ocorreu em lojas que já haviam sido visitadas anteriormente então será 1, caso contrário será zero;
+
+- repeat_retailer * used_chip = se a transação foi feita online E a transação ocorreu com o uso do chip do cartão de crédito (provávelmente, em local física);
+
+Observação importante: foi visto que transações acima do valor mediano das últimas transações tendem a ser mais fraudulentas do que as demais transações. Pode-se pensar que esta variável (ratio_to_median_purchase_price) defina se uma transação é fraudulenta ou não. Isso também pode implicar em um data leakage. O IV também direcionou um poder preditivo muito suspeito dessa variável (1.8).
 
 ## Pré-processamento dos dados
 
