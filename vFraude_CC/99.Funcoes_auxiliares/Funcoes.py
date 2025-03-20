@@ -284,18 +284,28 @@ def plot_histograma(variavel, df, label=None, bins=10):
         # Display do plot
         plt.show()
 
-    elif label == 'fraud': 
-
-        plt.hist(df[df['fraud'] == 0][variavel],  
+    #elif label == 'fraud': 
+    else:
+        # plt.hist(df[df['fraud'] == 0][variavel],  
+        #          alpha = 0.5,
+        #          label=['Not_fraud'],
+        #          bins=bins)
+        
+        # plt.hist(df[df['fraud'] == 1][variavel],  
+        #          alpha = 0.5,
+        #          label=['Fraud'],
+        #          bins=bins) 
+        
+        plt.hist(df[df[label] == 0][variavel],  
                  alpha = 0.5,
-                 label=['Not_fraud'],
+                 label=[label],
                  bins=bins)
         
-        plt.hist(df[df['fraud'] == 1][variavel],  
+        plt.hist(df[df[label] == 1][variavel],  
                  alpha = 0.5,
-                 label=['Fraud'],
-                 bins=bins) 
-        
+                 label=[label],
+                 bins=bins)
+
         # Adicionando legenda e títulos
         plt.xlabel('Valores')
         plt.ylabel('Frequência')
@@ -305,8 +315,8 @@ def plot_histograma(variavel, df, label=None, bins=10):
         # Display do plot
         plt.show()
     
-    elif label != None or label != 'fraud':
-        print("Nome de rótulo inválido")
+    #elif label != None or label != 'fraud':
+    #    print("Nome de rótulo inválido")
 
 
 # Função que calcula o PSI de cada variável
