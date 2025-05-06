@@ -18,3 +18,5 @@ Modelos considerando a base completa e desbalanceada:
 - 1.Modelos_PT1: aplicação de modelos somente com as variáveis originais, aplicados os filtros de correlação e de IV;
 
 - 2.Modelos_PT2: aplicação de modelos em variáveis criadas e originais, aplicados os filtros de correlação e de IV;
+
+- 2.Modelos_PT3: uso de blanceamento nas bases de treino e validação na base original, sem aplicação de tunning de hiperparâmetro. Não se mostrou muito eficicaz no aperfeiçoamento das métricas.
